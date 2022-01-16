@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="enrollment_form_view" model="ir.ui.view">
+            <field name="name">enrollment.form.view</field>
+            <field name="model">enrollment</field>
+            <field name="arch" type="xml">
+                <form string="Matrícula">
+                    <header>
+                        <button name="action_draft" string="Pasar a borrador" type="object" states="cancel"/>
+                        <button name="action_cancel" string="Cancelar" type="object" states="matriculate"/>
+                        <button name="action_matriculate" string="Matricular" class="oe_highlight" type="object" states="draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,matriculate,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Matrícula"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Carrera">
+                                <field name="career_period_id"/>
+                                <field name="date_begin"/>
+                                <field name="date_end"/>
+                                <field name="classroom_id"/>
+                            </group>
+                            <group string="Datos estudiante">
+                                <field name="student_partner_id" domain="[('type_partner', '=', 'student')]"/>
+                                <field name="college_career_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Materias">
+                                <field name="subjects_ids" widget="one2many_list" nolabel="1" readonly="1" force_save="1">
+                                    <tree>
+                                        <field name="subject_id"/>
+                                        <field name="max_score"/>
+                                        <field name="min_score"/>
+                                        <field name="average"/>
+                                        <field name="approved"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="enrollment_tree_view" model="ir.ui.view">
+            <field name="name">enrollment.tree.view</field>
+            <field name="model">enrollment</field>
+            <field name="arch" type="xml">
+                <tree string="Matrícula">
+                    <field name="name"/>
+                    <field name="student_partner_id"/>
+                    <field name="college_career_id"/>
+                    <field name="career_period_id"/>
+                    <field name="date_begin"/>
+                    <field name="date_end"/>
+                    <field name="classroom_id"/>
+                    <field name="state"
+                           widget="badge"
+                           decoration-info="state == 'draft'"
+                           decoration-danger="state == 'cancel'"
+                           decoration-success="state == 'matriculate'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="enrollment_search_view" model="ir.ui.view">
+            <field name="name">enrollment.search.view</field>
+            <field name="model">enrollment</field>
+            <field name="arch" type="xml">
+                <search string="Matrícula">
+                    <field name="name"/>
+                    <field name="student_partner_id"/>
+                    <field name="career_period_id"/>
+                    <field name="college_career_id"/>
+                    <field name="classroom_id"/>
+                    <separator/>
+                    <filter name="matriculate_filter" string="Matriculados" domain="[('state', 'in', ['matriculate'])]"/>
+                    <filter string="Fecha de inicio" name="filter_date_begin" date="date_begin"/>
+                    <filter string="Fecha de finalización" name="filter_date_end" date="date_end"/>
+                    <group expand="1" string="Agrupar por">
+                        <filter string="Estado" name="group_by_state" domain="[]"
+                                context="{'group_by':'state'}"/>
+                        <filter string="Periodo lectivo" name="group_by_career_period_id" domain="[]"
+                                context="{'group_by':'career_period_id'}"/>
+                        <filter string="Carreras" name="group_by_college_career_id" domain="[]"
+                                context="{'group_by':'college_career_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="enrollment_act_window" model="ir.actions.act_window">
+            <field name="name">Matrícula</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">enrollment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No hay ejemplos. Añada una nueva matrícula.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

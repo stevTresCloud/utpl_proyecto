@@ -1,0 +1,24 @@
+body.custom_body_survey {
+	margin-top: 0 !important;
+	overflow: scroll !important;
+}
+
+div#camera_div {
+	width: 100%;
+	border: 1px solid #000;
+	height: 40%;
+}
+
+video#arjs-video {
+	width: 50% !important;
+	left: 25% !important;
+}
+
+body.custom_body_survey video#arjs-video {
+	width: 82% !important;
+	left: 9% !important;
+	height: 61% !important;
+	top: 8% !important;
+	clip-path: margin-box;
+	margin-top: -19% !important;
+}

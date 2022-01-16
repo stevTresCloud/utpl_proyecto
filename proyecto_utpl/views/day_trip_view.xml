@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="day_trip_form_view" model="ir.ui.view">
+            <field name="name">day.trip.form.view</field>
+            <field name="model">day.trip</field>
+            <field name="arch" type="xml">
+                <form string="Jornada">
+                    <sheet>
+                        <div class="oe_button_box" name="expense_button_box">
+                            <button name="toggle_active"
+                                    type="object"
+                                    confirm="Si archiva la jornada, no podrá mostrarla en la creación de las nuevas matrículas, ¿desea continuar aún así?"
+                                    class="oe_stat_button"
+                                    icon="fa-archive">
+                                <span>Estado</span>
+                                <field name="active" widget="boolean_toggle" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Matutina o Vespertina"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="time_begin" widget="float_time"/>
+                                <field name="time_end" widget="float_time"/>
+                            </group>
+                            <group>
+                                <field name="time_day"/>
+                                <field name="sequence" groups="base.group_no_one"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description" widget="text"
+                                   placeholder="Añada una descripción para la jornada"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="day_trip_tree_view" model="ir.ui.view">
+            <field name="name">day.trip.tree.view</field>
+            <field name="model">day.trip</field>
+            <field name="arch" type="xml">
+                <tree string="Jornada">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="time_begin"/>
+                    <field name="time_end"/>
+                    <field name="time_day"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="day_trip_search_view" model="ir.ui.view">
+            <field name="name">day.trip.search.view</field>
+            <field name="model">day.trip</field>
+            <field name="arch" type="xml">
+                <search string="Jornada">
+                    <field name="name"/>
+                    <field name="time_day" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                    <filter string="Activos" name="active_filter" domain="[('active', '=', True)]"/>
+                    <filter string="Inactivos" name="inactive_filter" domain="[('active', '=', False)]"/>
+                    <group expand="1" string="Agrupar por">
+                        <filter string="Estado" name="active_group_by" domain="[]" context="{'group_by':'active'}"/>
+                        <filter string="Tiempo del día" name="time_day_group_by" domain="[]" context="{'group_by':'time_day'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="day_trip_act_window" model="ir.actions.act_window">
+            <field name="name">Jornada</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">day.trip</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No hay jornadas que mostrar, añada una jornada
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

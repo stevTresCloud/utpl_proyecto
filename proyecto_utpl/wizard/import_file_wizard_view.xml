@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="import_file_wizard_form_view" model="ir.ui.view">
+            <field name="name">import.file.wizard.form.view</field>
+            <field name="model">import.file.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Carga de archivo GLTF">
+                    <sheet>
+                        <field name="reference_image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="filename" class="oe_edit_only"/>
+                            <h1>
+                                <field name="filename" placeholder="Nombre del archivo" readonly="1" force_save="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="data" filename="db_filename" attrs="{'required': [('is_rewrite_file', '=', True)]}"/>
+                            <field name="db_filename" readonly="1" force_save="1"/>
+                        </group>
+                        <group attrs="{'invisible': [('has_file', '=', False)]}">
+                            <div attrs="{'invisible': [('has_file', '=', False)]}">
+                                <label for="has_file" class="oe_inline"/>
+                                <field name="has_file" invisible="1" class="oe_inline" />
+                                <label for="is_rewrite_file" class="oe_inline"/>
+                                <field name="is_rewrite_file" class="oe_inline" widget="boolean_toggle"/>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="mimetype"/>
+                                <field name="survey_id"/>
+                                <field name="old_attachment_id" attrs="{'invisible': [('has_file', '=', False)]}"/>
+                            </group>
+                        </group>
+                        <group string="Descripción">
+                            <field name="description" nolabel="1" placeholder="Escriba una descripción para el archivo a cargar" />
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_import_file" string="Importar Archivo" type="object" class="oe_highlight"/>
+                        <button string="Cancelar" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

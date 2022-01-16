@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="GLTF script libraries">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="https://aframe.io/releases/1.2.0/aframe.min.js"/>
+                <script type="text/javascript" src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"/>
+                <script type="text/javascript" src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"/>
+            </xpath>
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/proyecto_utpl/static/css/custom_survey_styles.scss"/>
+            </xpath>
+        </template>
+
+        <template id="survey_add_gltf_archive_survey_template_inherit" inherit_id="survey.survey_fill_form">
+            <xpath expr="//form" position="before">
+                <div id="camera_div">
+                    <t t-if="answer.survey_id.survey_type == 'subject_test' and answer.survey_id.state == 'open'">
+                        <span itemprop="attachment_id" t-esc="answer.survey_id.attachment_id.url"/>
+                    </t>
+                    <a-scene embedded="" arjs="sourceType: webcam;">
+                        <a-marker preset="hiro">
+                            <!--<a-sphere position="0 0 0" radius="0.6" color="#EF2D5E" ></a-sphere>-->
+                            <a-entity t-att-position="answer.gltf_position"
+                                      t-att-scale="answer.gltf_scale"
+                                      t-att-gltf-model="'/' + answer.survey_id.attachment_id.url">
+                            </a-entity>
+                        </a-marker>
+                        <a-entity camera="" ></a-entity>
+                    </a-scene>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="survey_add_css" inherit_id="survey.layout">
+            <xpath expr="//body" position="attributes">
+                <attribute name="t-att-class">'custom_body_survey'</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

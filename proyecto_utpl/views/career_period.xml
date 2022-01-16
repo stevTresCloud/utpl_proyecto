@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="career_period_form_view" model="ir.ui.view">
+            <field name="name">career.period.form.view</field>
+            <field name="model">career.period</field>
+            <field name="arch" type="xml">
+                <form string="Periodo Lectivo">
+                    <sheet>
+                        <div class="oe_button_box" name="expense_button_box">
+                            <button name="toggle_active"
+                                    type="object"
+                                    confirm="Si archiva el periodo lectivo, no podrá mostrarlo en la creación de las nuevas matrículas, ¿desea continuar aún así?"
+                                    class="oe_stat_button"
+                                    icon="fa-archive">
+                                <span>Estado</span>
+                                <field name="active" widget="boolean_toggle" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Febrero - Agosto"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <span>Fechas del periodo</span>
+                                <div class="o_row">
+                                    <field name="date_begin" widget="daterange" nolabel="1" class="oe_inline" options="{'related_end_date': 'date_end'}"/>
+                                    <i class="fa fa-long-arrow-right mx-2" aria-label="Arrow icon" title="Arrow"/>
+                                    <field name="date_end" widget="daterange" nolabel="1" class="oe_inline" options="{'related_start_date': 'date_begin'}"/>
+                                </div>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="type_period"/>
+                            <field name="day_trip"/>
+                            <field name="sequence" groups="base.group_no_one"/>
+                        </group>
+                        <group>
+                            <field name="description" widget="text"
+                                   placeholder="Añada una descripción para el periodo lectivo"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="career_period_tree_view" model="ir.ui.view">
+            <field name="name">career.period.tree.view</field>
+            <field name="model">career.period</field>
+            <field name="arch" type="xml">
+                <tree string="Periodo Lectivo">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="date_begin"/>
+                    <field name="date_end"/>
+                    <field name="day_trip"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="career_period_search_view" model="ir.ui.view">
+            <field name="name">career.period.search.view</field>
+            <field name="model">career.period</field>
+            <field name="arch" type="xml">
+                <search string="Periodo Lectivo">
+                    <field name="name"/>
+                    <field name="day_trip" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                    <group expand="1" string="Agrupar por">
+                        <filter string="Jornada" name="day_trip_group_by" domain="[]" context="{'group_by':'day_trip'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="career_period_act_window" model="ir.actions.act_window">
+            <field name="name">Periodo Lectivo</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">career.period</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No hay Periodos de carrera que mostrar. Añada uno.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

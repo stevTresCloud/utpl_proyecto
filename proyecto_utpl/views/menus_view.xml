@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="proyecto_utpl_root" name="Proyecto UTPL" sequence="10"/>
+
+        <!-- Categorías -->
+        <menuitem id="enrollment_utpl_categ" name="Carreras" parent="proyecto_utpl_root" sequence="20"/>
+        <menuitem id="settings_utpl_categ" name="Configuración" parent="proyecto_utpl_root" sequence="30"/>
+
+        <!-- Matrículas-->
+        <menuitem name="Matrículas" id="enrollment_menu" parent="proyecto_utpl_root" action="proyecto_utpl.enrollment_act_window" sequence="10"/>
+
+        <!-- Materias-->
+        <menuitem name="Materias" id="student_subject_menu" parent="enrollment_utpl_categ" action="proyecto_utpl.student_subject_act_window" sequence="10"/>
+
+        <!-- Carreras -->
+        <menuitem name="Carreras" id="college_career_menu" parent="enrollment_utpl_categ" action="proyecto_utpl.college_career_act_window" sequence="20"/>
+
+        <!-- Resultados de materias -->
+        <menuitem name="Resultados de estudiantes" id="student_subject_res_partner_menu" parent="enrollment_utpl_categ" action="proyecto_utpl.student_subject_res_partner_act_window" sequence="30"/>
+
+        <!-- Jornadas -->
+        <menuitem name="Jornadas" id="day_trip_menu" parent="settings_utpl_categ" action="proyecto_utpl.day_trip_act_window" sequence="10"/>
+
+        <!-- Periodos de carrera -->
+        <menuitem name="Periodos de Carrera" id="career_period_menu" parent="settings_utpl_categ" action="proyecto_utpl.career_period_act_window" sequence="20"/>
+
+        <!-- Cursos -->
+        <menuitem name="Cursos" id="classroom_menu" parent="settings_utpl_categ" action="proyecto_utpl.classroom_act_window" sequence="30"/>
+
+    </data>
+</odoo>

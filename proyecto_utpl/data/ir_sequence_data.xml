@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="survey_survey_attachment_sequence" model="ir.sequence">
+            <field name="name">Secuencia de archivo</field>
+            <field name="code">survey.survey</field>
+            <field name="prefix">GLTF</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="res_partner_student_sequence" model="ir.sequence">
+            <field name="name">Secuencia de Tabla de estudiantes</field>
+            <field name="code">res.partner.student.sequence</field>
+            <field name="padding">1</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="res_partner_teacher_sequence" model="ir.sequence">
+            <field name="name">Secuencia de Tabla de Profesores</field>
+            <field name="code">res.partner.teacher.sequence</field>
+            <field name="padding">1</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

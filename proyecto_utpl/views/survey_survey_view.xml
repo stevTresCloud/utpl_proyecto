@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="survey_survey_attachment_form_inherit" model="ir.ui.view">
+            <field name="name">survey.survey.attachment.form.inherit</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_open_import_gltf_wizard" type="object" string="Cargar archivo GLTF" class="oe_highlight" attrs="{'invisible': [('attachment_id', '!=', False)]}"/>
+                    <button name="action_open_import_gltf_wizard" type="object" string="Sobrescribir archivo GLTF" attrs="{'invisible': [('attachment_id', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//div[hasclass('oe_title')]" position="after">
+                    <group string="Tipo de encuesta">
+                        <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
+                    </group>
+                    <group attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
+                        <group string="Archivo GLTF">
+                            <field name="reference_image" widget="image" class="oe_avatar"/>
+                            <field name="attachment_id" readonly="1" force_save="1"/>
+                            <field name="gltf_position" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
+                            <field name="gltf_scale" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
+                            <field name="file_name" readonly="1" force_save="1" groups="base.group_no_one"/>
+                            <field name="db_filename" readonly="1" force_save="1" groups="base.group_no_one"/>
+                        </group>
+                        <group string="Configuración de test">
+                            <field name="subject_id" attrs="{'required': [('survey_type', '=', 'subject_test')]}"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

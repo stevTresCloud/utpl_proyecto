@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="college_career_form_view" model="ir.ui.view">
+            <field name="name">college.career.form.view</field>
+            <field name="model">college.career</field>
+            <field name="arch" type="xml">
+                <form string="Carrera">
+                    <sheet>
+                        <div class="oe_button_box" name="expense_button_box">
+                            <button name="toggle_active"
+                                    type="object"
+                                    confirm="Si archiva la carrera, no podrá mostrarlo en la creación de las nuevas matrículas, ¿desea continuar aún así?"
+                                    class="oe_stat_button"
+                                    icon="fa-archive">
+                                <span>Estado</span>
+                                <field name="active" widget="boolean_toggle" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Ingeniería en sistemas"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="subjects_ids" widget="many2many_tags"/>
+                                <field name="sequence"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description" widget="text"
+                                   placeholder="Añada una descripción para la carrera"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="college_career_tree_view" model="ir.ui.view">
+            <field name="name">college.career.tree.view</field>
+            <field name="model">college.career</field>
+            <field name="arch" type="xml">
+                <tree string="Carrera">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="subjects_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="college_career_search_view" model="ir.ui.view">
+            <field name="name">college.career.search.view</field>
+            <field name="model">college.career</field>
+            <field name="arch" type="xml">
+                <search string="Carrera">
+                     <filter name="active_filter" string="Activos" domain="[('active', '=', True)]"/>
+                     <filter name="inactive_filter" string="Inactivos" domain="[('active', '=', False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="college_career_act_window" model="ir.actions.act_window">
+            <field name="name">Carrera</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">college.career</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    No hay ejemplos. Añada una carrera.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
