@@ -21,10 +21,18 @@
                     <a-scene embedded="" arjs="sourceType: webcam;">
                         <a-marker preset="hiro">
                             <!--<a-sphere position="0 0 0" radius="0.6" color="#EF2D5E" ></a-sphere>-->
-                            <a-entity t-att-position="answer.survey_id.gltf_position"
+                            <t t-if="answer.survey_id.gltf_position and answer.survey_id.gltf_scale and answer.survey_id.attachment_id.url">
+                                <a-entity t-att-position="answer.survey_id.gltf_position"
                                       t-att-scale="answer.survey_id.gltf_scale"
                                       t-att-gltf-model="'/' + answer.survey_id.attachment_id.url">
-                            </a-entity>
+                                </a-entity>
+                            </t>
+                            <t t-else="">
+                                <a-entity position="0 0 0"
+                                          scale="0.05 0.05 0.05"
+                                          gltf-model="/proyecto_utpl/static/gltf/2CylinderEngine.gltf">
+                                </a-entity>
+                            </t>
                         </a-marker>
                         <a-entity camera="" ></a-entity>
                     </a-scene>
