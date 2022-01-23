@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <menuitem id="proyecto_utpl_root" name="Proyecto UTPL" sequence="10"/>
+        <menuitem id="proyecto_utpl_root" name="Académico" sequence="10"/>
 
         <!-- Categorías -->
         <menuitem id="enrollment_utpl_categ" name="Carreras" parent="proyecto_utpl_root" sequence="20"/>
@@ -20,8 +20,8 @@
         <!-- Resultados de materias -->
         <menuitem name="Resultados de estudiantes" id="student_subject_res_partner_menu" parent="enrollment_utpl_categ" action="proyecto_utpl.student_subject_res_partner_act_window" sequence="30"/>
 
-        <!-- Jornadas -->
-        <menuitem name="Jornadas" id="day_trip_menu" parent="settings_utpl_categ" action="proyecto_utpl.day_trip_act_window" sequence="10"/>
+        <!-- Modalidades -->
+        <menuitem name="Modalidades" id="day_trip_menu" parent="settings_utpl_categ" action="proyecto_utpl.day_trip_act_window" sequence="10"/>
 
         <!-- Periodos de carrera -->
         <menuitem name="Periodos de Carrera" id="career_period_menu" parent="settings_utpl_categ" action="proyecto_utpl.career_period_act_window" sequence="20"/>

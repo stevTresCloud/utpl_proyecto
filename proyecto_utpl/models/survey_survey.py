@@ -22,7 +22,7 @@ class Survey(models.Model):
     def action_open(self):
         for survey in self:
             if survey.survey_type == 'subject_test' and not survey.attachment_id:
-                raise ValidationError(u'No puede Iniciar la encuesta %s, hasta que suba un archivo GLTF para realidad aumentada.' % survey.title)
+                raise ValidationError(u'No puede Iniciar la evaluación %s, hasta que suba un archivo GLTF para realidad aumentada.' % survey.title)
         return super(Survey, self).action_open()
 
     def _create_answer(self, user=False, partner=False, email=False, test_entry=False, check_attempts=True, **additional_vals):
@@ -57,7 +57,7 @@ class Survey(models.Model):
     survey_type = fields.Selection(
         [('native', 'Ninguno'),
          ('subject_test', 'Prueba para materia')],
-        string='Tipo de encuesta',
+        string='Tipo de evaluación',
         default='native',
     )
     subject_id = fields.Many2one(

@@ -13,4 +13,4 @@ from . import student_subject_res_partner
 from . import teacher_subject_res_partner
 from . import student_subject
 from . import res_partner
-# from . import res_users
+from . import res_users

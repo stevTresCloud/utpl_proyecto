@@ -12,7 +12,7 @@
                     <button name="action_open_import_gltf_wizard" type="object" string="Sobrescribir archivo GLTF" attrs="{'invisible': [('attachment_id', '=', False)]}"/>
                 </xpath>
                 <xpath expr="//div[hasclass('oe_title')]" position="after">
-                    <group string="Tipo de encuesta">
+                    <group string="Tipo de evaluación">
                         <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
                     </group>
                     <group attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
