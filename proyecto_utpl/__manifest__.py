@@ -20,7 +20,7 @@
     ],
     'assets': {
         'survey.survey_assets': [
-            '/proyecto_utpl/static/css/custom_survey_styles.scss',
+            'proyecto_utpl/static/css/custom_survey_styles.scss',
         ]
     },
     'data': [
