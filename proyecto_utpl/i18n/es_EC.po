@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-23 22:33+0000\n"
-"PO-Revision-Date: 2022-01-23 22:33+0000\n"
+"POT-Creation-Date: 2022-01-23 23:18+0000\n"
+"PO-Revision-Date: 2022-01-23 23:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,7 @@ msgstr ""
 msgid ""
 "<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
 "title=\"Arrow\"/>"
-msgstr "<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
-"title=\"Arrow\"/>"
+msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.add_partner_type_form_inherit
@@ -35,17 +34,17 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.day_trip_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid "<span>Estado</span>"
-msgstr "<span>Estado</span>"
+msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.career_period_form_view
 msgid "<span>Fechas del periodo</span>"
-msgstr "<span>Fechas del periodo</span>"
+msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.ui.menu,name:proyecto_utpl.proyecto_utpl_root
 msgid "Académico"
-msgstr "Académico"
+msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__access_warning
@@ -456,12 +455,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_day_trip__display_name
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__display_name
 #: model:ir.model.fields,field_description:proyecto_utpl.field_import_file_wizard__display_name
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_company__display_name
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_partner__display_name
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_users__display_name
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__display_name
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_res_partner_rel__display_name
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_scores__display_name
+#: model:ir.model.fields,field_description:proyecto_utpl.field_survey_survey__display_name
+#: model:ir.model.fields,field_description:proyecto_utpl.field_survey_user_input__display_name
 #: model:ir.model.fields,field_description:proyecto_utpl.field_teacher_subject_res_partner_rel__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre mostrado"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__date_end
@@ -486,16 +491,6 @@ msgstr ""
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.wizard_student_subject_view_scores_view_form
 msgid "Editar notas"
-msgstr ""
-
-#. module: proyecto_utpl
-#: model:ir.model.fields,field_description:proyecto_utpl.field_import_file_wizard__survey_id
-msgid "Encuesta"
-msgstr "Evaluación"
-
-#. module: proyecto_utpl
-#: model:ir.model.fields,help:proyecto_utpl.field_import_file_wizard__survey_id
-msgid "Evaluación referenciada a la que se le añadirá el archivo GLTF"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -562,6 +557,16 @@ msgid "Estudiantes matriculados"
 msgstr ""
 
 #. module: proyecto_utpl
+#: model:ir.model.fields,field_description:proyecto_utpl.field_import_file_wizard__survey_id
+msgid "Evaluación"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model:ir.model.fields,help:proyecto_utpl.field_import_file_wizard__survey_id
+msgid "Evaluación referenciada a la que se le añadirá el archivo GLTF"
+msgstr ""
+
+#. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_import_file_wizard__has_file
 msgid "Evalúa si se tiene una rchivo adjunto o no"
 msgstr ""
@@ -591,6 +596,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_follower_ids
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_follower_ids
 msgid "Followers"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__message_channel_ids
+#: model:ir.model.fields,field_description:proyecto_utpl.field_classroom__message_channel_ids
+#: model:ir.model.fields,field_description:proyecto_utpl.field_college_career__message_channel_ids
+#: model:ir.model.fields,field_description:proyecto_utpl.field_day_trip__message_channel_ids
+#: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_channel_ids
+#: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_channel_ids
+msgid "Followers (Channels)"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -624,16 +639,6 @@ msgid "GLTF escala"
 msgstr ""
 
 #. module: proyecto_utpl
-#: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__has_message
-#: model:ir.model.fields,field_description:proyecto_utpl.field_classroom__has_message
-#: model:ir.model.fields,field_description:proyecto_utpl.field_college_career__has_message
-#: model:ir.model.fields,field_description:proyecto_utpl.field_day_trip__has_message
-#: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__has_message
-#: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__has_message
-msgid "Has Message"
-msgstr ""
-
-#. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_day_trip__time_end
 msgid "Hora de finalización"
 msgstr ""
@@ -660,12 +665,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_day_trip__id
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__id
 #: model:ir.model.fields,field_description:proyecto_utpl.field_import_file_wizard__id
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_company__id
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_config_settings__id
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_partner__id
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_users__id
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__id
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_res_partner_rel__id
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_scores__id
+#: model:ir.model.fields,field_description:proyecto_utpl.field_survey_survey__id
+#: model:ir.model.fields,field_description:proyecto_utpl.field_survey_user_input__id
 #: model:ir.model.fields,field_description:proyecto_utpl.field_teacher_subject_res_partner_rel__id
 msgid "ID"
-msgstr ""
+msgstr "ID (identificación)"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__activity_exception_icon
@@ -797,12 +808,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_day_trip____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_import_file_wizard____last_update
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_company____last_update
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_partner____last_update
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_users____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_res_partner_rel____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_scores____last_update
+#: model:ir.model.fields,field_description:proyecto_utpl.field_survey_survey____last_update
+#: model:ir.model.fields,field_description:proyecto_utpl.field_survey_user_input____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_teacher_subject_res_partner_rel____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación el"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__write_uid
@@ -1187,7 +1204,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_student_subject_scores
-msgid "Notas del estudiante, a partir de la encuesta que se contesta"
+msgid "Notas del estudiante, a partir de la evaluación que se contesta"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1672,7 +1689,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_import_file_wizard
-msgid "Wizard para importación de archivos a encuestas."
+msgid "Wizard para importación de archivos a evaluación."
 msgstr ""
 
 #. module: proyecto_utpl
