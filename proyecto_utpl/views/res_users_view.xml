@@ -21,11 +21,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//tree//field[@name='lang']" position="replace"/>
                 <xpath expr="//tree//field[@name='login']" position="after">
-                    <field name="compute_user_type"
-                           widget="badge"
-                           decoration-info="compute_user_type == ref('base.group_user')"
-                           decoration-danger="compute_user_type == ref('base.group_public')"
-                           decoration-success="compute_user_type == ref('base.group_portal')"/>
+                    <field name="compute_user_type"/>
                 </xpath>
             </field>
         </record>
