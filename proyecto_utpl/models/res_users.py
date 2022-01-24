@@ -39,6 +39,7 @@ class Users(models.Model):
 
     compute_user_type = fields.Many2one(
         'res.groups',
+        string='Tipo de usuario',
         help='Tipo de usuario',
         compute='_compute_user_type',
         store=True,
