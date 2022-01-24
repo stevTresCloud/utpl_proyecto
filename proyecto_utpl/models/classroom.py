@@ -89,7 +89,7 @@ class Classroom(models.Model):
     )
     student_ids = fields.One2many(
         'res.partner',
-        'parent_id',
+        'classrom_number',
         string='Estudiantes',
         compute='_compute_student_ids',
         store=True,
