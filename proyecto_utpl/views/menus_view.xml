@@ -26,8 +26,8 @@
         <!-- Periodos de carrera -->
         <menuitem name="Periodos de Carrera" id="career_period_menu" parent="settings_utpl_categ" action="proyecto_utpl.career_period_act_window" sequence="20"/>
 
-        <!-- Cursos -->
-        <menuitem name="Cursos" id="classroom_menu" parent="settings_utpl_categ" action="proyecto_utpl.classroom_act_window" sequence="30"/>
+        <!-- Aulas -->
+        <menuitem name="Aulas" id="classroom_menu" parent="settings_utpl_categ" action="proyecto_utpl.classroom_act_window" sequence="30"/>
 
     </data>
 </odoo>

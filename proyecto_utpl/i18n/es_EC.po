@@ -196,7 +196,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
-msgid "Añada una descripción para el curso actual"
+msgid "Añada una descripción para el aula actual"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -371,12 +371,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_search_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_tree_view
-msgid "Curso"
+msgid "Aula"
 msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.ui.menu,name:proyecto_utpl.classroom_menu
-msgid "Cursos"
+msgid "Aulas"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1079,7 +1079,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.actions.act_window,help:proyecto_utpl.classroom_act_window
-msgid "No hay cursos que mostrar, añada un curso"
+msgid "No hay aulas que mostrar, añada un aulas"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1107,7 +1107,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
-msgid "Nombre de curso"
+msgid "Nombre del aula"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1490,7 +1490,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid ""
-"Si archiva el curso, no podrá mostrarla en la creación de las nuevas "
+"Si archiva el aula, no podrá mostrarla en la creación de las nuevas "
 "matrículas, ¿desea continuar aún así?"
 msgstr ""
 

@@ -6,12 +6,12 @@
             <field name="name">classroom.form.view</field>
             <field name="model">classroom</field>
             <field name="arch" type="xml">
-                <form string="Curso">
+                <form string="Aula">
                     <sheet>
                         <div class="oe_button_box" name="expense_button_box">
                             <button name="toggle_active"
                                     type="object"
-                                    confirm="Si archiva el curso, no podrá mostrarla en la creación de las nuevas matrículas, ¿desea continuar aún así?"
+                                    confirm="Si archiva el aula, no podrá mostrarla en la creación de las nuevas matrículas, ¿desea continuar aún así?"
                                     class="oe_stat_button"
                                     icon="fa-archive">
                                 <span>Estado</span>
@@ -21,7 +21,7 @@
                         <div class="oe_title">
                             <label for="name" class="oe_edit_only"/>
                             <h1>
-                                <field name="name" placeholder="Nombre de curso"/>
+                                <field name="name" placeholder="Nombre de aula"/>
                             </h1>
                         </div>
                         <group>
@@ -37,7 +37,7 @@
                             </group>
                         </group>
                         <group>
-                            <field name="description" widget="text" placeholder="Añada una descripción para el curso actual"/>
+                            <field name="description" widget="text" placeholder="Añada una descripción para el aula actual"/>
                         </group>
                         <notebook colspan="4">
                             <page string="Estudiantes" name="student_details" autofocus="autofocus">
@@ -176,7 +176,7 @@
             <field name="name">classroom.tree.view</field>
             <field name="model">classroom</field>
             <field name="arch" type="xml">
-                <tree string="Curso">
+                <tree string="Aula">
                     <field name="sequence" widget="handle"/>
                     <field name="name"/>
                     <field name="enrolled_students_count"/>
@@ -189,7 +189,7 @@
             <field name="name">ProjectName.ModelName.search</field>
             <field name="model">classroom</field>
             <field name="arch" type="xml">
-                <search string="Curso">
+                <search string="Aula">
                     <field name="name"/>
                     <field name="code"/>
                     <field name="active" invisible="1"/>
@@ -204,13 +204,13 @@
         </record>
 
         <record id="classroom_act_window" model="ir.actions.act_window">
-            <field name="name">Curso</field>
+            <field name="name">Aula</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">classroom</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
-                    No hay cursos que mostrar, añada un curso
+                    No hay aulas que mostrar, añada un aula
                 </p>
             </field>
         </record>

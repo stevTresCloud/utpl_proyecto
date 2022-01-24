@@ -11,7 +11,7 @@
                         <div class="oe_button_box" name="expense_button_box">
                             <button name="toggle_active"
                                     type="object"
-                                    confirm="Si archiva el curso, no podrá mostrarla en la creación de las nuevas matrículas, ¿desea continuar aún así?"
+                                    confirm="Si archiva el aula, no podrá mostrarla en la creación de las nuevas matrículas, ¿desea continuar aún así?"
                                     class="oe_stat_button"
                                     icon="fa-archive">
                                 <span>Estado</span>
