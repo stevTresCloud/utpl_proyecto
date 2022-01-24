@@ -27,18 +27,6 @@ class ResPartner(models.Model):
                 partner.average = average
                 partner.general_approved_status = general_approved_status
 
-    @api.depends('compute_user_type')
-    def _compute_user_type(self):
-        for user in self:
-            if user.has_group('base.group_user'):
-                user.compute_user_type = self.env.ref('base.group_user')
-            elif user.has_group('base.group_portal'):
-                user.compute_user_type = self.env.ref('base.group_portal')
-            elif user.has_group('base.group_public'):
-                user.compute_user_type = self.env.ref('base.group_public')
-            else:
-                user.compute_user_type = False
-
     type_partner = fields.Selection(
         [('native', 'Ninguno'),
          ('teacher', 'Profesor'),
@@ -46,13 +34,6 @@ class ResPartner(models.Model):
         string='Tipo de contacto',
         default='native',
         required=True,
-    )
-    compute_user_type = fields.fields.Many2one(
-        'res.groups',
-        help='Tipo de usuario',
-        compute='_compute_user_type',
-        store=True,
-        copy=False
     )
     classrom_number = fields.Many2one(
         'classroom',
