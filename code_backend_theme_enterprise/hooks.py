@@ -234,6 +234,10 @@ def test_pre_init_hook(cr):
             img_path = get_module_resource(
                 'code_backend_theme_enterprise', 'static', 'src', 'img', 'icons', 'like.png')
             menu.write({'web_icon_data': base64.b64encode(open(img_path, "rb").read())})
+        if menu.name == 'Académico':
+            img_path = get_module_resource(
+                'code_backend_theme_enterprise', 'static', 'src', 'img', 'icons', 'mortarboard.png')
+            menu.write({'web_icon_data': base64.b64encode(open(img_path, "rb").read())})
 
 
 def test_post_init_hook(cr, registry):
@@ -443,5 +447,9 @@ def test_post_init_hook(cr, registry):
         if menu.name == 'Social Marketing':
             img_path = get_module_resource(
                 'code_backend_theme_enterprise', 'static', 'src', 'img', 'icons', 'like.png')
+            menu.write({'web_icon_data': base64.b64encode(open(img_path, "rb").read())})
+        if menu.name == 'Académico':
+            img_path = get_module_resource(
+                'code_backend_theme_enterprise', 'static', 'src', 'img', 'icons', 'mortarboard.png')
             menu.write({'web_icon_data': base64.b64encode(open(img_path, "rb").read())})
 
