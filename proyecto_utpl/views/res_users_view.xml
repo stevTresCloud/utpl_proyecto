@@ -23,9 +23,9 @@
                 <xpath expr="//tree//field[@name='login']" position="after">
                     <field name="compute_user_type"
                            widget="badge"
-                           decoration-info="compute_user_type.id == ref('base.group_user').id"
-                           decoration-danger="compute_user_type.id == ref('base.group_public').id"
-                           decoration-success="compute_user_type.id == ref('base.group_portal').id"/>
+                           decoration-info="compute_user_type == ref('base.group_user')"
+                           decoration-danger="compute_user_type == ref('base.group_public')"
+                           decoration-success="compute_user_type == ref('base.group_portal')"/>
                 </xpath>
             </field>
         </record>
