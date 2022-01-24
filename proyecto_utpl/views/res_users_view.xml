@@ -13,5 +13,21 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="view_users_tree" model="ir.ui.view">
+            <field name="name">view.users.tree</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree//field[@name='lang']" position="replace"/>
+                <xpath expr="//tree//field[@name='login']" position="after">
+                    <field name="compute_user_type"
+                           widget="badge"
+                           decoration-info="compute_user_type.id == ref('base.group_user').id"
+                           decoration-danger="compute_user_type.id == ref('base.group_public').id"
+                           decoration-success="compute_user_type.id == ref('base.group_portal').id"/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
