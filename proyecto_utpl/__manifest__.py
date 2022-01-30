@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Modulo Alex',
-    'version': '1.9',
+    'version': '2.0',
     'category': 'Sales',
     'description': '''
         Modulo Alex
@@ -44,5 +44,6 @@
     ],
     'application': True,
     'installable': True,
+    'auto_install': False,
 }
 
