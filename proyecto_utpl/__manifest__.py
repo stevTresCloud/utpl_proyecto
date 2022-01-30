@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Modulo Alex',
-    'version': '2.1',
+    'version': '2.2',
     'category': 'Sales',
     'description': '''
         Modulo Alex
@@ -38,7 +38,7 @@
         'views/menus_view.xml',
         # Wizards
         'wizard/import_file_wizard_view.xml',
-
+        'wizard/survey_invite_views.xml',
         # Templates
         'views/survey_templates.xml',
     ],
