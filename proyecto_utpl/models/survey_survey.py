@@ -9,7 +9,7 @@ class Survey(models.Model):
 
     def action_open_import_gltf_wizard(self):
         '''Acción para abrir el asistente de carga de archivos GLTF al formulario'''
-        if not self.state != 'draft':
+        if self.state != 'draft':
             raise ValidationError(u'No puede cambiar el archivo GLTF ya que la encuesta está ya aprobada. Cancele la encuesta actual y vuelvala a borrador para cambiar el archivo GLTF.')
         view_id = self.env.ref('proyecto_utpl.import_file_wizard_form_view').id
         return {

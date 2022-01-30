@@ -8,8 +8,8 @@
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
                 <xpath expr="//header" position="inside">
-                    <button name="action_open_import_gltf_wizard" type="object" string="Cargar archivo GLTF" class="oe_highlight" attrs="{'invisible': [('attachment_id', '!=', False)]}"/>
-                    <button name="action_open_import_gltf_wizard" type="object" string="Sobrescribir archivo GLTF" attrs="{'invisible': [('attachment_id', '=', False), ('state', '!=', 'draft')]}"/>
+                    <button name="action_open_import_gltf_wizard" type="object" string="Cargar archivo GLTF" class="oe_highlight" attrs="{'invisible': ['|', ('attachment_id', '!=', False), ('state', '!=', 'draft')]}"/>
+                    <button name="action_open_import_gltf_wizard" type="object" string="Sobrescribir archivo GLTF" attrs="{'invisible': ['|', ('attachment_id', '=', False), ('state', '!=', 'draft')]}"/>
                 </xpath>
                 <xpath expr="//div[hasclass('oe_title')]" position="after">
                     <group string="Tipo de evaluación">
