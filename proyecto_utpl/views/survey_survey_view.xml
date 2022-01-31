@@ -25,9 +25,20 @@
                             <field name="db_filename" readonly="1" force_save="1" groups="base.group_no_one"/>
                         </group>
                         <group string="Configuración de test">
+                            <div class="alert alert-info" role="alert" attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
+                                <h5><b>Posición</b></h5>
+                                <p>Corresponde a la <b>posición</b> de tu objeto 3D. De forma predeterminada, como va a estar al centro de tu pantalla, los valores serán "0 0 0".</p>
+                                <h5><b>Escala</b></h5>
+                                <p>Los 3 valores de la escala deben ser <b>siempre iguales</b> para que tu objeto 3D se mantenga del mismo <b>alto, ancho y profundidad</b> con el que fue creado.</p>
+                                <p>Si tu objeto 3D es de gran tamaño, puedes <b>ajustar la escala</b> reduciendo los valores hasta '0.01 0.01 0.01'. Lo mismo puedes hacer con la posición</p>
+                                <p>Puedes hacer crecer el objeto 3D a medida que aumentan las 3 cantidades.</p>
+                            </div>
                             <field name="subject_id" attrs="{'required': [('survey_type', '=', 'subject_test')]}"/>
                         </group>
                     </group>
+                </xpath>
+                <xpath expr="//page[@name='options']//group[@name='options']//group[last()]" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </xpath>
             </field>
         </record>

@@ -793,12 +793,12 @@ msgstr ""
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__day_trip
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.career_period_search_view
-msgid "Jornada"
+msgid "Modalidad"
 msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_career_period__day_trip
-msgid "Jornada del periodo lectivo"
+msgid "Modalidad del periodo lectivo"
 msgstr ""
 
 #. module: proyecto_utpl

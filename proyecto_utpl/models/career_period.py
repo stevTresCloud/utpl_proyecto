@@ -68,8 +68,8 @@ class CareerPeriod(models.Model):
     )
     day_trip = fields.Many2one(
         'day.trip',
-        string='Jornada',
-        help='Jornada del periodo lectivo',
+        string='Modalidad',
+        help='Modalidad del periodo lectivo',
         required=True,
     )
     description = fields.Char(

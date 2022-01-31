@@ -76,7 +76,7 @@
                     <field name="day_trip" invisible="1"/>
                     <field name="active" invisible="1"/>
                     <group expand="1" string="Agrupar por">
-                        <filter string="Jornada" name="day_trip_group_by" domain="[]" context="{'group_by':'day_trip'}"/>
+                        <filter string="Modalidad" name="day_trip_group_by" domain="[]" context="{'group_by':'day_trip'}"/>
                     </group>
                 </search>
             </field>
