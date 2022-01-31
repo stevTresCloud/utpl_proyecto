@@ -17,7 +17,6 @@
         'survey',
         'website',
         'contacts',
-        'code_backend_theme_enterprise',
     ],
     'data': [
         # Data
