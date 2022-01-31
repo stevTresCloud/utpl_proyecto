@@ -12,9 +12,12 @@
                     <button name="action_open_import_gltf_wizard" type="object" string="Sobrescribir archivo GLTF" attrs="{'invisible': ['|', ('attachment_id', '=', False), ('state', '!=', 'draft')]}"/>
                 </xpath>
                 <xpath expr="//div[hasclass('oe_title')]" position="after">
-                    <group attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
+                    <group>
                         <group>
-                            <group string="Archivo GLTF">
+                            <group string="Tipo de evaluación">
+                                <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
+                            </group>
+                            <group string="Archivo GLTF" attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
                                 <field name="reference_image" widget="image" class="oe_avatar"/>
                                 <field name="attachment_id" readonly="1" force_save="1"/>
                                 <field name="gltf_position" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
@@ -22,12 +25,9 @@
                                 <field name="file_name" readonly="1" force_save="1" groups="base.group_no_one"/>
                                 <field name="db_filename" readonly="1" force_save="1" groups="base.group_no_one"/>
                             </group>
-                            <group string="Tipo de evaluación">
-                                <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
-                            </group>
                         </group>
-                        <group string="Configuración de test" col="1">
-                            <div class="alert alert-info" role="alert" attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
+                        <group string="Configuración de test" col="1" attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
+                            <div class="alert alert-info" role="alert">
                                 <h5><b>Posición</b></h5>
                                 <p>Corresponde a la <b>posición</b> de tu objeto 3D. De forma predeterminada, como va a estar al centro de tu pantalla, los valores serán "0 0 0".</p>
                                 <h5><b>Escala</b></h5>
