@@ -13,7 +13,7 @@
                 </xpath>
                 <xpath expr="//div[hasclass('oe_title')]" position="after">
                     <group>
-                        <group>
+                        <group col="1">
                             <group string="Tipo de evaluación">
                                 <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
                             </group>
