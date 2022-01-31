@@ -6,14 +6,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-23 23:18+0000\n"
-"PO-Revision-Date: 2022-01-23 23:18+0000\n"
+"POT-Creation-Date: 2022-01-31 10:39+0000\n"
+"PO-Revision-Date: 2022-01-31 10:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_survey_attachment_form_inherit
+msgid "<b>Escala</b>"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_survey_attachment_form_inherit
+msgid "<b>Posición</b>"
+msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.career_period_form_view
@@ -64,7 +74,7 @@ msgstr "Advertencias de acceso"
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_needaction
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "Necesita acción"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__activity_ids
@@ -74,7 +84,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__activity_ids
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "Actividades"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__activity_exception_decoration
@@ -84,7 +94,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__activity_exception_decoration
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "Decorador de actividad de excepción"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__activity_state
@@ -104,7 +114,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__activity_type_icon
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "Ícono del tipo de actividad"
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_search_view
@@ -174,18 +184,25 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_attachment_count
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Contador de adjuntos"
 
 #. module: proyecto_utpl
+#: model:ir.actions.act_window,name:proyecto_utpl.classroom_act_window
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__classroom_id
-#: model:ir.model.fields,field_description:proyecto_utpl.field_res_partner__classrom_number
-#: model:ir.model.fields,field_description:proyecto_utpl.field_res_users__classrom_number
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_search_view
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_tree_view
 msgid "Aula"
 msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_classroom
 msgid "Aula del estudiante"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model:ir.ui.menu,name:proyecto_utpl.classroom_menu
+msgid "Aulas"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -276,6 +293,12 @@ msgid "City"
 msgstr ""
 
 #. module: proyecto_utpl
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_partner__classrom_number
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_users__classrom_number
+msgid "Classrom Number"
+msgstr "Número de Aula"
+
+#. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_res_company
 msgid "Companies"
 msgstr "Compañías"
@@ -283,7 +306,7 @@ msgstr "Compañías"
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_classroom__company_id
 msgid "Company"
-msgstr ""
+msgstr "Compañía"
 
 #. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_res_config_settings
@@ -313,25 +336,32 @@ msgstr "Contacto"
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 msgid "Contact / Address"
-msgstr ""
+msgstr "Contacto / Dirección"
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid "Contact Name"
-msgstr ""
+msgstr "Nombre del contacto"
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid "Contact image"
+msgstr "Imagen del contacto"
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_survey_attachment_form_inherit
+msgid ""
+"Corresponde a la <b>posición</b> de tu objeto 3D. De forma predeterminada, "
+"como va a estar al centro de tu pantalla, los valores serán \"0 0 0\"."
 msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__create_uid
@@ -345,7 +375,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_scores__create_uid
 #: model:ir.model.fields,field_description:proyecto_utpl.field_teacher_subject_res_partner_rel__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__create_date
@@ -359,24 +389,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject_scores__create_date
 #: model:ir.model.fields,field_description:proyecto_utpl.field_teacher_subject_res_partner_rel__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado en"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields.selection,name:proyecto_utpl.selection__career_period__type_period__quarterly
 msgid "Cuatrimestral"
-msgstr ""
-
-#. module: proyecto_utpl
-#: model:ir.actions.act_window,name:proyecto_utpl.classroom_act_window
-#: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
-#: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_search_view
-#: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_tree_view
-msgid "Aula"
-msgstr ""
-
-#. module: proyecto_utpl
-#: model:ir.ui.menu,name:proyecto_utpl.classroom_menu
-msgid "Aulas"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -387,7 +404,7 @@ msgstr ""
 #: model:ir.model.fields,help:proyecto_utpl.field_enrollment__access_url
 #: model:ir.model.fields,help:proyecto_utpl.field_student_subject__access_url
 msgid "Customer Portal URL"
-msgstr ""
+msgstr "URL de cliente de portal"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_classroom__code
@@ -596,7 +613,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_follower_ids
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__message_channel_ids
@@ -606,7 +623,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_channel_ids
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "Seguidores (Canales)"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__message_partner_ids
@@ -616,7 +633,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_partner_ids
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Seguidores (Partners)"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_career_period__activity_type_icon
@@ -636,6 +653,11 @@ msgstr ""
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_survey_survey__gltf_scale
 msgid "GLTF escala"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_fill_form_done
+msgid "Go to Website"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -686,7 +708,7 @@ msgstr "ID (identificación)"
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__activity_exception_icon
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Ícono"
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_career_period__activity_exception_icon
@@ -696,7 +718,7 @@ msgstr ""
 #: model:ir.model.fields,help:proyecto_utpl.field_enrollment__activity_exception_icon
 #: model:ir.model.fields,help:proyecto_utpl.field_student_subject__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "Ícono para indicar una actividad de excepción."
 
 #. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_career_period__message_needaction
@@ -791,17 +813,6 @@ msgid "Is Follower"
 msgstr ""
 
 #. module: proyecto_utpl
-#: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__day_trip
-#: model_terms:ir.ui.view,arch_db:proyecto_utpl.career_period_search_view
-msgid "Modalidad"
-msgstr ""
-
-#. module: proyecto_utpl
-#: model:ir.model.fields,help:proyecto_utpl.field_career_period__day_trip
-msgid "Modalidad del periodo lectivo"
-msgstr ""
-
-#. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_classroom____last_update
 #: model:ir.model.fields,field_description:proyecto_utpl.field_college_career____last_update
@@ -853,6 +864,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid "Logo"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_survey_attachment_form_inherit
+msgid ""
+"Los 3 valores de la escala deben ser <b>siempre iguales</b> para que tu "
+"objeto 3D se mantenga del mismo <b>alto, ancho y profundidad</b> con el que "
+"fue creado."
 msgstr ""
 
 #. module: proyecto_utpl
@@ -987,6 +1006,11 @@ msgid "Messages"
 msgstr ""
 
 #. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_fill_form_done
+msgid "Mi perfil"
+msgstr ""
+
+#. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.student_subject_form_view
 msgid "Mobile:"
@@ -994,11 +1018,18 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model:ir.actions.act_window,name:proyecto_utpl.day_trip_act_window
+#: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__day_trip
 #: model:ir.model.fields,help:proyecto_utpl.field_day_trip__name
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.career_period_search_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.day_trip_form_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.day_trip_search_view
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.day_trip_tree_view
 msgid "Modalidad"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model:ir.model.fields,help:proyecto_utpl.field_career_period__day_trip
+msgid "Modalidad del periodo lectivo"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1079,7 +1110,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.actions.act_window,help:proyecto_utpl.classroom_act_window
-msgid "No hay aulas que mostrar, añada un aulas"
+msgid "No hay aulas que mostrar, añada un aula"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1107,7 +1138,7 @@ msgstr ""
 
 #. module: proyecto_utpl
 #: model_terms:ir.ui.view,arch_db:proyecto_utpl.classroom_form_view
-msgid "Nombre del aula"
+msgid "Nombre de aula"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1386,6 +1417,12 @@ msgid "Prueba para materia"
 msgstr ""
 
 #. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_survey_attachment_form_inherit
+msgid ""
+"Puedes hacer crecer el objeto 3D a medida que aumentan las 3 cantidades."
+msgstr ""
+
+#. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__minimum_score_to_pass
 #: model:ir.model.fields,help:proyecto_utpl.field_student_subject__minimum_score_to_pass
 msgid "Puntaje mínimo para aprobar"
@@ -1408,6 +1445,11 @@ msgstr ""
 #. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_student_subject_scores__student_subject_id
 msgid "Referencia de la materia"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_fill_form_done
+msgid "Regresar al sitio web"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1448,6 +1490,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:proyecto_utpl.field_enrollment__message_has_sms_error
 #: model:ir.model.fields,field_description:proyecto_utpl.field_student_subject__message_has_sms_error
 msgid "SMS Delivery error"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_fill_form_done
+msgid "Salir"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1516,8 +1563,21 @@ msgid ""
 msgstr ""
 
 #. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_fill_form_done
+msgid "Si desea puede escoger las siguientes opciones"
+msgstr ""
+
+#. module: proyecto_utpl
 #: model:ir.model.fields,help:proyecto_utpl.field_import_file_wizard__is_rewrite_file
 msgid "Si se desea sobreescribir el archivo o no"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model_terms:ir.ui.view,arch_db:proyecto_utpl.survey_survey_attachment_form_inherit
+msgid ""
+"Si tu objeto 3D es de gran tamaño, puedes <b>ajustar la escala</b> "
+"reduciendo los valores hasta '0.01 0.01 0.01'. Lo mismo puedes hacer con la "
+"posición"
 msgstr ""
 
 #. module: proyecto_utpl
@@ -1561,7 +1621,7 @@ msgstr ""
 #. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_survey_survey
 msgid "Survey"
-msgstr "Evaluaciones"
+msgstr "Evaluación"
 
 #. module: proyecto_utpl
 #: model:ir.model,name:proyecto_utpl.model_survey_user_input
@@ -1625,6 +1685,12 @@ msgstr ""
 #. module: proyecto_utpl
 #: model:ir.model.fields,field_description:proyecto_utpl.field_career_period__type_period
 msgid "Tipo de periodo"
+msgstr ""
+
+#. module: proyecto_utpl
+#: model:ir.model.fields,field_description:proyecto_utpl.field_res_users__compute_user_type
+#: model:ir.model.fields,help:proyecto_utpl.field_res_users__compute_user_type
+msgid "Tipo de usuario"
 msgstr ""
 
 #. module: proyecto_utpl

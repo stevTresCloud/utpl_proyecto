@@ -12,19 +12,21 @@
                     <button name="action_open_import_gltf_wizard" type="object" string="Sobrescribir archivo GLTF" attrs="{'invisible': ['|', ('attachment_id', '=', False), ('state', '!=', 'draft')]}"/>
                 </xpath>
                 <xpath expr="//div[hasclass('oe_title')]" position="after">
-                    <group string="Tipo de evaluación">
-                        <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
-                    </group>
                     <group attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
-                        <group string="Archivo GLTF">
-                            <field name="reference_image" widget="image" class="oe_avatar"/>
-                            <field name="attachment_id" readonly="1" force_save="1"/>
-                            <field name="gltf_position" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
-                            <field name="gltf_scale" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
-                            <field name="file_name" readonly="1" force_save="1" groups="base.group_no_one"/>
-                            <field name="db_filename" readonly="1" force_save="1" groups="base.group_no_one"/>
+                        <group>
+                            <group string="Archivo GLTF">
+                                <field name="reference_image" widget="image" class="oe_avatar"/>
+                                <field name="attachment_id" readonly="1" force_save="1"/>
+                                <field name="gltf_position" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
+                                <field name="gltf_scale" attrs="{'invisible': [('attachment_id', '=', False)], 'required': [('attachment_id', '!=', False)]}"/>
+                                <field name="file_name" readonly="1" force_save="1" groups="base.group_no_one"/>
+                                <field name="db_filename" readonly="1" force_save="1" groups="base.group_no_one"/>
+                            </group>
+                            <group string="Tipo de evaluación">
+                                <field name="survey_type" widget="radio" options="{'horizontal': true}"/>
+                            </group>
                         </group>
-                        <group string="Configuración de test">
+                        <group string="Configuración de test" col="1">
                             <div class="alert alert-info" role="alert" attrs="{'invisible': [('survey_type', '!=', 'subject_test')]}">
                                 <h5><b>Posición</b></h5>
                                 <p>Corresponde a la <b>posición</b> de tu objeto 3D. De forma predeterminada, como va a estar al centro de tu pantalla, los valores serán "0 0 0".</p>
@@ -33,7 +35,9 @@
                                 <p>Si tu objeto 3D es de gran tamaño, puedes <b>ajustar la escala</b> reduciendo los valores hasta '0.01 0.01 0.01'. Lo mismo puedes hacer con la posición</p>
                                 <p>Puedes hacer crecer el objeto 3D a medida que aumentan las 3 cantidades.</p>
                             </div>
-                            <field name="subject_id" attrs="{'required': [('survey_type', '=', 'subject_test')]}"/>
+                            <group col='2'>
+                              <field name="subject_id" attrs="{'required': [('survey_type', '=', 'subject_test')]}"/>
+                            </group>
                         </group>
                     </group>
                 </xpath>
