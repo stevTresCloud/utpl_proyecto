@@ -13,5 +13,17 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="view_users_tree" model="ir.ui.view">
+            <field name="name">view.users.tree</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree//field[@name='lang']" position="replace"/>
+                <xpath expr="//tree//field[@name='login']" position="after">
+                    <field name="compute_user_type"/>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>

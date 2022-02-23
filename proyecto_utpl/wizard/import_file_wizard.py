@@ -13,12 +13,12 @@ _logger = logging.getLogger(__name__)
 
 class ImportFileWizard(models.TransientModel):
     _name = 'import.file.wizard'
-    _description = 'Wizard para importación de archivos a encuestas.'
+    _description = 'Wizard para importación de archivos a evaluación.'
 
     @api.model
     def default_get(self, fields):
         '''
-        Se obtiene los datos del archivo adjunto, si es que se tuviere para sobreescribir. Además se manda la referencia de la encuesta en el wizard.
+        Se obtiene los datos del archivo adjunto, si es que se tuviere para sobreescribir. Además se manda la referencia de la evaluación en el wizard.
         '''
         res = super(ImportFileWizard, self).default_get(fields)
         active_survey_id = self.env.context.get('active_id', False)
@@ -126,4 +126,4 @@ class ImportFileWizard(models.TransientModel):
     has_file = fields.Boolean('Ya tiene un archivo', readonly=True, help='Evalúa si se tiene una rchivo adjunto o no')
     old_attachment_id = fields.Many2one('ir.attachment', 'Archivo antiguo importado', readonly=True, help='Archivo antiguo ya cargado en el sistema.')
     datas_old_file = fields.Binary('Archivo', required=True, attachment=True, help='Datos del archivo antiguo')
-    survey_id = fields.Many2one('survey.survey', string="Encuesta", readonly=True, help='Encuesta referenciada a la que se le añadirá el archivo GLTF')
+    survey_id = fields.Many2one('survey.survey', string="Evaluación", readonly=True, help='Evaluación referenciada a la que se le añadirá el archivo GLTF')

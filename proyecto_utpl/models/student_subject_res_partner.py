@@ -125,7 +125,7 @@ class StudentSubjectResPartner(models.Model):
 
 class StudentSubjectScores(models.Model):
     _name = 'student.subject.scores'
-    _description = 'Notas del estudiante, a partir de la encuesta que se contesta'
+    _description = 'Notas del estudiante, a partir de la evaluación que se contesta'
 
     response_id = fields.Many2one(
         'survey.user_input',

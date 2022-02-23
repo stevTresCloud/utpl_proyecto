@@ -37,7 +37,6 @@ class ResPartner(models.Model):
     )
     classrom_number = fields.Many2one(
         'classroom',
-        related='enrollment_id.classroom_id',
         help='Número de clase en la que estará matriculado el estudiante.',
         store=True,
         copy=False
